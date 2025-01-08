@@ -1,0 +1,38 @@
+[
+    {
+        "id": "tabs-with-underline-1",
+        "alias": "Evodev",
+        "name": "Évodév Technologies Inc.",
+        "duration": "Sept. 2024 - Present",
+        "link": "https://www.evodev.ca/",
+        "technology": "Python, Javascript, Haml, SQL Alchemy,  MySql, Microsoft Graph API, Docker",
+        "summary": "Led multiple projects focused on migrating legacy code from Python 2.7 to Python 3, ensuring a smooth transition and improved performance. Engaged in various updates requested by clients for web applications, specifically related to calibration systems and construction management. Collaborated with Outlook APIs, primarily utilizing the Microsoft Graph API to perform various CRUD operations for events and calendar management"
+    },
+    {
+        "id": "tabs-with-underline-2",
+        "alias": "CCSE",
+        "name": "Cold Chain Science Enterprice",
+        "duration": "Jan. 2024 - Sept. 2024",
+        "link": "https://www.coldchainscience.com/",
+        "technology": "Python, Nuxt.js,FastAPI, Java, JavaScript, SQL Alchemy, PostgreSQL, MongoDB, Google Map API, Docker",
+        "summary": "Identified and fixed key issues in the Java monitoring system, enhancing code performance and data integration with PostgreSQL, which boosted system reliability. Also implementing a new project that incorporates a modern tech stack for efficient development and performance. Architected the back end with Python, employing SQL Alchemy for effective database interactions and FastAPI for robust API development. Front-end incorporates Nuxt.js for better user interaction. Implemented Postgres as the database"
+    },
+    {
+        "id": "tabs-with-underline-3",
+        "alias": "TDG",
+        "name": "The Dev Guys",
+        "duration": "Sept. 2023 - Dec. 2023",
+        "link": "https://www.thedevguys.in/",
+        "technology": "Next.JS, Supabase, Prisma",
+        "summary": "Engineered and rigorously debugged a web application using Next.js and Supabase, significantly reducing error rates and enhancing user experience, which led to improved user retention. Developed a fully responsive blog web application featuring an intuitive dashboard for the efficient management of posts, bookmarks, and other essential functionalities. Enhanced the blog web app to be fully responsive, improving user engagement and increasing session duration"
+    },
+    {
+        "id": "tabs-with-underline-4",
+        "alias": "Brainvire",
+        "name": "Brainvire Infotech Pvt. Ltd.",
+        "duration": "Feb. 2021 - June 2022",
+        "link": "https://www.brainvire.com/",
+        "technology": "Python, Odoo, PostgreSQL, Prisma, Docker, XML, JavaScript",
+        "summary": "Took charge of designing, developing, and integrating customer-specific features using Python to modularize system features and enhance scalability. Optimized database schemas and normalization in PostgreSQL, leading to significantly faster query performance. Orchestrated event-based monitoring for the Point of Sales (POS) application to identify performance bottlenecks, reducing the turnaround time for root cause analysis. Developed a modular and configurable framework that simplifies the integration of new payment systems, drastically reducing development time"
+    }
+]
