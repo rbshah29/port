@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "title": "Rutvik Shah | Software Developer",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

@@ -9,7 +9,7 @@
                 <div class="relative rounded-lg shadow-2xl popup-bg border-r-2 border-b-2">
                     <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                         <h1 class="text-white text-lg font-semibold">
-                            I will Connect back ASAP!  
+                            I will Connect back ASAP! 
                         </h1>
                         <button @click="toggleModal" type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">

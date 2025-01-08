@@ -17,7 +17,9 @@
     </div>
   </div>
 </template>
+<script>
 
+</script>
 <style scoped>
 .back-color {
   background-color: #0a192f;
