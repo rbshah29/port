@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Outlook Event Manager",
+        "git_url": "https://github.com/rbshah29/outlook-manager",
+        "description": "Outlook Event manager uses Graph API to fetch events from Outlook calendar and display them in a user-friendly way. It also allows users to create, update, and delete events.",
+        "techs": ["Python", "Flask", "Microsoft Graph API","Docker"]
+    },
+    {
+        "title": "Personal Portfolio",
+        "git_url": "https://github.com/rbshah29/port",
+        "description": "Personal Portfolio is a website that showcases your skills, projects, and contact information. We can also share out experience. It is a great way to show your work to the world.",
+        "techs": ["Nuxt.js", "Tailwind CSS","Vue.js", "TypeScript"],
+        "url": "https://rshah.dev"
+
+    }
+]

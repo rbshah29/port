@@ -8,7 +8,7 @@
       <div class="w-full lg:w-2/3 p-4">
         <About />
         <Experience />
-        <!-- <Projects /> -->
+        <Projects />
         <div class="flex justify-center items-center m-7">
           <hr/>
           <Contact />

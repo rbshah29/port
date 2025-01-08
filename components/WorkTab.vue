@@ -33,7 +33,7 @@
                             <span
                                 v-for="(tech, index) in tab.technology.split(', ')"
                                 :key="index"
-                                class="bg-indigo-600 text-white py-1 px-3 rounded-full text-xs"
+                                class="whitespace-nowrap rounded-full text-white font-semibold px-2.5 py-0.5 text-xs border border-blue-700"
                             >
                                 {{ tech }}
                             </span>
