@@ -3,7 +3,7 @@
         <div class="mt-2 m-4">
             <p class="text-left text-1 mb-2">Hi, my name is </p>
             <p class="text-left font-bold text-5xl mb-2 font-name-1 text-transparent bg-clip-text bg-gradient-to-r from-[#75c6c7] to-[#0b2e46] lg:text-5xl">Rutvik Shah</p>
-            <p class="text-left text-2 mb-2">I’m a software engineer solving complex problems and delivering high-quality, user-centric applications that meet business goals.</p>
+            <p class="text-left text-2 mb-2">I’m a software developer solving complex problems and delivering high-quality, user-centric applications that meet business goals.</p>
         </div>
         
         <div class="sm:mt-">

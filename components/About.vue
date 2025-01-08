@@ -3,7 +3,7 @@
         <h1 class="text-3xl text-1">About</h1>
         <div class="m-4 text-2">
             <p>
-                I am a software developer who loves building things that make life easier and more enjoyable. I’ve created software application, web apps, mobile apps, APIs, etc., always focusing on clean, efficient code and user-friendly designs. Working with docker and cloud is also something that I am good with.
+                I'm a software developer who loves creating things that make life easier and more fun. I've built software applications, web apps, mobile apps, APIs, and more, always aiming for clean, efficient code and user-friendly designs. I'm also pretty good with Docker and cloud stuff.
             </p><br/>
             <p>
                 I enjoy solving challenging problems and turning ideas into functional, impactful software. Currently I am working as a Software developer at <a href="https://www.evodev.ca/" target="_blank" class="text-blue-500">Évodév Technologies Inc. </a> where I am responsible for developing and maintaining the features for multiple projects.
