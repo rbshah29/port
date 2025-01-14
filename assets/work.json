@@ -6,7 +6,7 @@
         "duration": "Sept. 2024 - Present",
         "link": "https://www.evodev.ca/",
         "technology": "Python, Javascript, Haml, SQL Alchemy,  MySql, Microsoft Graph API, Docker",
-        "summary": "Led multiple projects focused on migrating legacy code from Python 2.7 to Python 3, ensuring a smooth transition and improved performance. Engaged in various updates requested by clients for web applications, specifically related to calibration systems and construction management. Collaborated with Outlook APIs, primarily utilizing the Microsoft Graph API to perform various CRUD operations for events and calendar management"
+        "summary": "Led multiple projects focused on migrating legacy code from Python 2.7 to Python 3, ensuring a smooth transition and improved performance. Engaged in various updates requested by clients for web applications, specifically related to calibration systems and construction management. Collaborated with Outlook APIs, primarily utilizing the Microsoft Graph API to perform various CRUD operations for events and calendar management. Currently building tablet application using Python's buildozer library"
     },
     {
         "id": "tabs-with-underline-2",
