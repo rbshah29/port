@@ -14,7 +14,7 @@
         "name": "Cold Chain Science Enterprice",
         "duration": "Jan. 2024 - Sept. 2024",
         "link": "https://www.coldchainscience.com/",
-        "technology": "Python, Nuxt.js,FastAPI, Java, JavaScript, SQL Alchemy, PostgreSQL, MongoDB, Google Map API, Docker",
+        "technology": "Python, Nuxt.js, FastAPI, Java, JavaScript, SQL Alchemy, PostgreSQL, MongoDB, Google Map API, Docker",
         "summary": "Identified and fixed key issues in the Java monitoring system, enhancing code performance and data integration with PostgreSQL, which boosted system reliability. Also implementing a new project that incorporates a modern tech stack for efficient development and performance. Architected the back end with Python, employing SQL Alchemy for effective database interactions and FastAPI for robust API development. Front-end incorporates Nuxt.js for better user interaction. Implemented Postgres as the database"
     },
     {
