@@ -3,5 +3,14 @@
       "title": "Web Scraper",
       "git_url": "https://github.com/rbshah29/webscrapper",
       "techs": ["Python", "BeautifulSoup"]
-  }
+  },
+  {
+    "title": "Notebook",
+    "git_url": "https://github.com/rbshah29/notebook",
+    "techs": ["Node Js", "HTML", "CSS"]
+},{
+  "title": "Music Player",
+  "git_url": "https://github.com/rbshah29/music",
+  "techs": ["Python"]
+}
 ]

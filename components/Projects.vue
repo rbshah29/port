@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="m-4">
+    <div class="m-4 text-white font-bold border-gray-800 border-b-2">
       More basic projects with just understanding of the technology
     </div>
     <div class="m-8 grid grid-cols-1 md:grid-cols-2 gap-4">
