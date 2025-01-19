@@ -17,7 +17,7 @@
     {
         "title": "Weather Forecast API",
         "git_url": "https://github.com/rbshah29/get-temp-backend",
-        "description": "This project is a FastAPI web service that fetches and visualizes weather data based on latitude and longitude coordinates. It includes various API available in /docs seciton.",
+        "description": "This project is a FastAPI web service that fetches and visualizes weather data based on latitude and longitude coordinates. It includes various API available in fastapi docs section.",
         "techs": ["Python", "Fast API", "Open Meteo API"]
     }
 ]

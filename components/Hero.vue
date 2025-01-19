@@ -2,7 +2,7 @@
     <div class="white pb-6 pt-4 m-2 text-center font-name">
         <div class="mt-2 m-4">
             <p class="text-left text-1 mb-2">Hi, my name is </p>
-            <p class="text-left font-bold text-5xl mb-2 font-name-1 text-transparent bg-clip-text bg-gradient-to-r from-[#75c6c7] to-[#0b2e46] lg:text-5xl">Rutvik Shah</p>
+            <p class="text-left  text-heading font-bold text-5xl mb-2 font-name-1 lg:text-5xl">Rutvik Shah</p>
             <p class="text-left text-2 mb-2">I’m a software developer solving complex problems and delivering high-quality, user-centric applications that meet business goals.</p>
         </div>
         
@@ -19,7 +19,7 @@
                             <path class=""
                                 d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
                         </svg>
-                        Montreal, QC
+                        Montreal, QC 
                     </div>
                 </div>
             </div>
@@ -27,14 +27,21 @@
         
         <div class="mt-12 sm:mt-6">
             <div class="text-center my-4">
-
-                        <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <div class="flex text-center justify-center">
+                    <div class="m-4 relative bg-gray-950 text-white group inline-block">
+                        <div class="absolute inset-0 bg-gradient-to-r from-teal-500 via-[#0047e1] to-[#0047e1] rounded-lg blur-xl opacity-10 group-hover:opacity-100 transition duration-300"></div>
+                        <button class="relative rounded-md bg-gradient-to-r from-teal-500 via-[#0047e1] to-[#0047e1] text-white font-semibold p-0.5">
+                          <span class="flex w-full bg-gray-900 text-white rounded px-6 py-2 font-medium"> <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> </span>
                         </button>
-                        <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" @click="copyEmail">
-                            Email
+                      </div>
+                      <div class="m-4 relative bg-gray-950 text-white group inline-block">
+                        <div class="absolute inset-0 bg-gradient-to-r from-teal-500 via-[#0047e1] to-[#0047e1] rounded-lg blur-xl opacity-10 group-hover:opacity-100 transition duration-300"></div>
+                        <button class="relative rounded-md bg-gradient-to-r from-teal-500 via-[#0047e1] to-[#0047e1] text-white font-semibold p-0.5" @click="copyEmail">
+                          <span class="flex w-full bg-gray-900 text-white rounded px-6 py-2 font-medium"> Email </span>
                         </button>
-                    </div>
+                      </div>
+                </div>
+            </div>
              
             <div class="flex justify-center space-x-4">
                 <a href="https://github.com/rbshah29">
@@ -75,6 +82,9 @@ export default {
 }
 </script>
 <style>
+.text-heading{
+    color: #A1BFB9;
+}
 .text-1{
     color: #64ffda;
 }
@@ -88,4 +98,5 @@ export default {
 .text-2{
     color: #8892b0;
 }
+
 </style>
