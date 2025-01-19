@@ -1,6 +1,6 @@
 <template>
     <div class="m-3">
-        <h1 class="text-3xl text-1">Projects</h1>
+        <h1 class="text-3xl text-1"> Notable Projects</h1>
     </div>
 
     <div class="m-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -40,8 +40,8 @@
       </div>
     </div>
 
-    <div class="m-4 text-white font-bold border-gray-800 border-b-2">
-      More basic projects with just understanding of the technology
+    <!-- <div class="m-4 text-white font-bold border-gray-800 border-b-2">
+      Basic Projects
     </div>
     <div class="m-8 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div v-for="(tab, index) in basicproject" :key="index">
@@ -69,7 +69,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     
 
 </template>

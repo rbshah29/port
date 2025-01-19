@@ -1,10 +1,5 @@
 [
-    {
-        "title": "Outlook Event Manager",
-        "git_url": "https://github.com/rbshah29/outlook-manager",
-        "description": "Outlook Event manager uses Graph API to fetch events from Outlook calendar and display them in a user-friendly way. It also allows users to create, update, and delete events.",
-        "techs": ["Python", "Flask", "Microsoft Graph API","Docker"]
-    },
+    
     {
         "title": "Personal Portfolio",
         "git_url": "https://github.com/rbshah29/port",
@@ -12,5 +7,17 @@
         "techs": ["Nuxt.js", "Tailwind CSS","Vue.js", "TypeScript"],
         "url": "https://rshah.dev"
 
+    },
+    {
+        "title": "Outlook Event Manager",
+        "git_url": "https://github.com/rbshah29/outlook-manager",
+        "description": "Outlook Event manager uses Graph API to fetch events from Outlook calendar and display them in a user-friendly way. It also allows users to create, update, and delete events.",
+        "techs": ["Python", "Flask", "Microsoft Graph API","Docker"]
+    },
+    {
+        "title": "Weather Forecast API",
+        "git_url": "https://github.com/rbshah29/get-temp-backend",
+        "description": "This project is a FastAPI web service that fetches and visualizes weather data based on latitude and longitude coordinates. It includes various API available in /docs seciton.",
+        "techs": ["Python", "Fast API", "Open Meteo API"]
     }
 ]
