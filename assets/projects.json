@@ -19,5 +19,11 @@
         "git_url": "https://github.com/rbshah29/get-temp-backend",
         "description": "This project is a FastAPI web service that fetches and visualizes weather data based on latitude and longitude coordinates. It includes various API available in fastapi docs section.",
         "techs": ["Python", "Fast API", "Open Meteo API"]
+    },
+    {
+        "title": "NoteKeep - Mimic of Google Keep",
+        "git_url": "https://github.com/rbshah29/notekeep",
+        "description": "This Notepad application, built with Vue.js and Node.js, allows users to create, read, and delete notes. It features dark mode support, search functionality, and uses MongoDB for data storage. ",
+        "techs": ["Node.js", "Nuxt.js", "Tailwing", "MongoDB"]
     }
 ]
