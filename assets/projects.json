@@ -23,7 +23,7 @@
     {
         "title": "NoteKeep - Mimic of Google Keep",
         "git_url": "https://github.com/rbshah29/notekeep",
-        "description": "This Notepad application, built with Vue.js and Node.js, allows users to create, read, and delete notes. It features dark mode support, search functionality, and uses MongoDB for data storage. ",
+        "description": "This Notepad application, allows users to create, read, and delete notes. It also includes authentication and collaboration features with explicit permissions, search functionality, and uses MongoDB for data storage.",
         "techs": ["Node.js", "Nuxt.js", "Tailwind CSS", "MongoDB"]
     }
 ]

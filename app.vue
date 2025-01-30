@@ -22,7 +22,7 @@
 </script>
 <style scoped>
 .back-color {
-  background-color: #0a192f;
+  background-color: #010e20;
 }
 
 .font-name {

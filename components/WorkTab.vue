@@ -9,7 +9,7 @@
                         :class="{
                             'tab-active:border-b-indigo-600 tab-active:text-indigo-600 active': activeTab === tab.id,
                         }"
-                        class="inline-block py-4 px-6 text-white hover:text-gray-500 font-medium border-b-2 border-transparent tablink whitespace-nowrap"
+                        class="inline-block py-4 px-6 color-tav font-medium border-b-2 border-transparent tablink whitespace-nowrap"
                         role="tab"
                     >
                         {{ tab.alias }}
@@ -33,12 +33,12 @@
                             <span
                                 v-for="(tech, index) in tab.technology.split(', ')"
                                 :key="index"
-                                class="whitespace-nowrap rounded-full text-white font-semibold px-2.5 py-0.5 text-xs border border-blue-700"
+                                class="whitespace-nowrap rounded-full pill-color font-semibold px-2.5 py-0.5 text-xs border border-blue-700"
                             >
                                 {{ tech }}
                             </span>
                         </div>
-                        <ul class="text-white m-8 list-disc">
+                        <ul class="text-2 m-8 list-disc">
                             <li v-for="(line, index) in tab.summary.split('. ')" :key="index">{{ line }}</li>
                         </ul>
                         
@@ -70,5 +70,11 @@ export default {
 <style scoped>
 .hidden {
     display: none;
+}
+.color-tav {
+    color:lightsteelblue;
+}
+.color-tav:hover {
+    color: gray;
 }
 </style>

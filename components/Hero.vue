@@ -96,7 +96,9 @@ export default {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
 .text-2{
-    color: #8892b0;
+    color: #A9A297;;
 }
-
+.pill-color {
+    color: navajowhite;
+}
 </style>
