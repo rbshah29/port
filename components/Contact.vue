@@ -7,7 +7,7 @@
           <div class="m-4 p-6 text-center text-2 text-xl">
             <h1 class="text-3xl text-1 mb-8">Get In Touch!</h1>
             <p class="mb-4 ">
-              Want to grab a virtual coffee and talk about life, work, or the latest trends? Hit me up! My inbox is always open.
+                Want to grab a virtual coffee and talk about life, work, or the latest trends? Hit me up! My <a href="mailto:rbshah0029@gmail.com" class="text-blue-400">inbox</a> is always open.
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@
         <div class="bg-slate-800 px-3 py-2 rounded-lg shadow-md h-full flex flex-col">
           <div :id="tab.id" class="m-2 tabcontent flex-grow" role="tabpanel" :aria-labelledby="tab.id">
             <div class="flex justify-between items-center">
-              <h2 class="text-2xl font-bold text-white">
+              <h2 class="text-2xl font-bold text-cyan-500">
                 {{ tab.title }} 
               </h2>
               <a v-if="tab.git_url" :href="tab.git_url">
@@ -18,7 +18,7 @@
               </a>
             </div>
             <div class="flex-wrap gap-2 mt-4">
-              <span class="text-2 text-sm">
+              <span class="text-neutral-400 font-bold text-sm">
                 {{ tab.description }}
               </span>
             </div>
@@ -39,5 +39,4 @@
 
 <script setup>
 import projects from 'assets/projects.json';
-import basicproject from 'assets/basicprojects.json'
 </script>
