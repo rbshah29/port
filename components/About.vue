@@ -3,7 +3,7 @@
         <h1 class="text-3xl text-1">About</h1>
         <div class="m-4 text-2">
             <p>
-                I am a software developer passionate about creating solutions that enhance daily life and bring joy. My experience encompasses building software applications, web apps, mobile apps, and APIs, all with a focus on producing clean, efficient code and designing user-friendly interfaces. I also have a solid understanding of Docker and cloud technologies.
+                I am a software developer passionate about creating solutions that enhance daily life and bring joy. My experience encompasses building software applications, web apps, mobile apps, and APIs, all with a focus on producing clean, efficient code and designing user-friendly interfaces.
             </p><br/>
             <p>
                 I thrive on tackling challenging problems and transforming concepts into functional, impactful software. Presently, I work as a software developer at <a href="https://www.evodev.ca/" target="_blank" class="text-blue-500">Évodév Technologies Inc. </a>, where I am responsible for developing and maintaining features across multiple projects.
