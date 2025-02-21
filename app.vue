@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-h-screen back-color font-name">
-    <div>
+    <div class="flex-grow">
       <div class="flex flex-col lg:flex-row">
         <div class="lg:sticky lg:top-0 lg:h-screen w-full lg:w-1/3 p-4">
           <Hero />
@@ -14,19 +14,14 @@
             <hr/>
             <Contact />
           </div>
+          <div>
+              <Footer/>        
+          </div>
         </div>
       </div>
     </div>
-    <div>
-      <Footer class="bottom-0 w-full bg-red-600 md:mt-0 lg:mt-20 xl:mt-0"/>
-    </div>
   </div>
 </template>
-<script>
-import Footer from './components/Footer.vue';
-
-
-</script>
 <style scoped>
 .back-color {
   background-color: #010e20;
