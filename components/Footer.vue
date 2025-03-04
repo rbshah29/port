@@ -6,7 +6,7 @@
                 <svg version="1.2" height="30" width="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
                     <path 
                         id="pulsar" 
-                        stroke="rgba(128,0,128,1)" 
+                        stroke="rgba(255,0,0,1)" 
                         fill="none" 
                         stroke-width="2"
                         stroke-linejoin="round" 
@@ -46,6 +46,7 @@
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
     animation: dash 2s linear infinite;
+    stroke: white;
 }
 
 @keyframes dash {
@@ -60,8 +61,9 @@
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     #pulsar {
-        stroke: rgb(128, 0, 128);
-        filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.5));
+        
+        stroke: rgb(146, 226, 163);
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
     }
 }
 </style>

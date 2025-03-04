@@ -18,7 +18,7 @@
               </a>
             </div>
             <div class="flex-wrap gap-2 mt-4">
-              <span class="text-neutral-400 font-bold text-sm">
+              <span class="text-2 text-sm">
                 {{ tab.description }}
               </span>
             </div>
