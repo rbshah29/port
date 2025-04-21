@@ -86,7 +86,8 @@ export default {
     color: #A1BFB9;
 }
 .text-1{
-    color: #64ffda;
+    color: #0459cf;
+    font: bold;
 }
 .hidden {
     display: none;
