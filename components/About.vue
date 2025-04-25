@@ -12,7 +12,7 @@
                 My professional journey has involved collaboration with various companies in sectors like supply chain management, open-source ERP solutions, and full-stack project development. I find inspiration in teamwork and the pursuit of new technologies. I am always eager to learn and grow, whether that's by exploring a new framework or enhancing existing solutions.
             </p><br/>
             <p>
-                Outside of coding, I enjoy discovering new movies and series or getting lost in a good book. I am enthusiastic about building exceptional software and making a meaningful impact through technology!
+                Outside of coding, I enjoy discovering new movies and series or reading a good book. I am enthusiastic about building exceptional software and making a meaningful impact through technology!
             </p><br/>
         </div>
     </div>   
