@@ -3,7 +3,7 @@
         <div class="mt-2 m-4">
             <p class="text-left text-1 mb-2">Hi, my name is </p>
             <p class="text-left  text-heading font-bold text-5xl mb-2 font-name-1 lg:text-5xl">Rutvik Shah</p>
-            <p class="text-left text-2 mb-2">I’m a software developer solving complex problems and delivering high-quality, user-centric applications that meet business goals.</p>
+            <p class="text-left text-2 mb-2">Hi, I’m a developer who speaks both backend and frontend fluently (been at it for almost 4 years now).Whether it’s building APIs, designing smooth UIs, or just figuring out why something refuses to work, I’m all in.</p>
         </div>
         
         <div class="sm:mt-">
