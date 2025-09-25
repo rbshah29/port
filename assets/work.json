@@ -6,7 +6,7 @@
         "duration": "Sept. 2024 - Present",
         "link": "https://www.evodev.ca/",
         "technology": "Python, JS, SQL Alchemy,  MySql, Microsoft Graph API, Docker, Flutter, Nuxt.js",
-        "summary": "Currently working with flutter application using Firebase DB and Sqlite DB. Led multiple projects focused on migrating legacy code from Python 2.7 to Python 3, ensuring a smooth transition and improved performance. Engaged in various updates requested by clients for web applications, specifically related to calibration systems and construction management. Collaborated with Outlook APIs, primarily utilizing the Microsoft Graph API to perform various CRUD operations for events and calendar management. Currently building tablet application using Python's buildozer library"
+        "summary": "Currently working with flutter application using Firebase DB and Sqlite DB. Worked with Point in time backup and restoration of databases. Engaged in various updates requested by clients for web applications, specifically related to calibration systems and construction management. Collaborated with Outlook APIs, primarily utilizing the Microsoft Graph API to perform various CRUD operations for events and calendar management. Currently building tablet application using Python's buildozer library. Led multiple projects focused on migrating legacy code from Python 2.7 to Python 3, ensuring a smooth transition and improved performance."
     },
     {
         "id": "tabs-with-underline-2",
@@ -15,7 +15,7 @@
         "duration": "Jan. 2024 - Sept. 2024",
         "link": "https://www.coldchainscience.com/",
         "technology": "Python, Nuxt.js, FastAPI, Java, JavaScript, SQL Alchemy, PostgreSQL, MongoDB, Google Map API, Docker",
-        "summary": "Identified and fixed key issues in the Java monitoring system, enhancing code performance and data integration with PostgreSQL, which boosted system reliability. Also implementing a new project that incorporates a modern tech stack for efficient development and performance. Architected the back end with Python, employing SQL Alchemy for effective database interactions and FastAPI for robust API development. Front-end incorporates Nuxt.js for better user interaction. Implemented Postgres as the database"
+        "summary": "Identified and fixed key issues in the Java monitoring system, enhancing code performance and data integration with PostgreSQL, which boosted system reliability. Also implementing a new project that incorporates a modern tech stack for efficient development and performance. Architected the back end with Python, employing SQL Alchemy for effective database interactions and FastAPI for robust API development. Front-end incorporates Nuxt.js for better user interaction. Worked with Tailwind CSS and implemented Postgres as the database"
     },
     {
         "id": "tabs-with-underline-3",

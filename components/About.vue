@@ -3,16 +3,16 @@
         <h1 class="text-3xl text-1">About</h1>
         <div class="m-4 text-2">
             <p>
-                I am a software developer passionate about creating solutions that enhance daily life and bring joy. My experience encompasses building software applications, web apps, mobile apps, and APIs, all with a focus on producing clean, efficient code and designing user-friendly interfaces.
+                Hey there! I'm a software developer who loves creating things that make life easier and more enjoyable. I've worked on all sorts of projects—web apps, mobile apps, APIs—you name it! I always aim to write clean, efficient code and design interfaces that are easy to use.
             </p><br/>
             <p>
-                I thrive on tackling challenging problems and transforming concepts into functional, impactful software. Presently, I work as a software developer at <a href="https://www.evodev.ca/" target="_blank" class="text-blue-500">Évodév Technologies Inc. </a>, where I am responsible for developing and maintaining features across multiple projects.
+                I enjoy solving tricky problems and turning ideas into real, impactful software. Right now, I’m part of the team at <a href="https://www.evodev.ca/" target="_blank" class="text-blue-500">Évodév Technologies Inc.</a>, where I get to work on cool features for different projects.
             </p><br/>
             <p>
-                My professional journey has involved collaboration with various companies in sectors like supply chain management, open-source ERP solutions, and full-stack project development. I find inspiration in teamwork and the pursuit of new technologies. I am always eager to learn and grow, whether that's by exploring a new framework or enhancing existing solutions.
+                Over the years, I’ve collaborated with companies in areas like supply chain management, open-source ERP systems, and full-stack development. I love working with others, learning new tech, and finding better ways to build awesome stuff.
             </p><br/>
             <p>
-                Outside of coding, I enjoy discovering new movies and series or reading a good book. I am enthusiastic about building exceptional software and making a meaningful impact through technology!
+                When I’m not coding, you’ll probably find me watching a new movie, bingeing a series, or diving into a good book. I’m all about creating amazing software and making a difference through tech!
             </p><br/>
         </div>
     </div>   

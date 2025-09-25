@@ -1,14 +1,6 @@
 [
     
     {
-        "title": "Personal Portfolio",
-        "git_url": "https://github.com/rbshah29/port",
-        "description": "Personal Portfolio is a website that showcases your skills, projects, and contact information. We can also share out experience. It is a great way to show your work to the world.",
-        "techs": ["Nuxt.js", "Tailwind CSS","Vue.js", "TypeScript"],
-        "url": "https://rshah.dev"
-
-    },
-    {
         "title": "Outlook Event Manager",
         "git_url": "https://github.com/rbshah29/outlook-manager",
         "description": "Outlook Event manager uses Graph API to fetch events from Outlook calendar and display them in a user-friendly way. It also allows users to create, update, and delete events.",
@@ -25,5 +17,11 @@
         "git_url": "https://github.com/rbshah29/notekeep",
         "description": "This Notepad application, allows users to create, read, and delete notes. It also includes authentication and collaboration features with explicit permissions, search functionality, and uses MongoDB for data storage.",
         "techs": ["Node.js", "Nuxt.js", "Tailwind CSS", "MongoDB"]
+    },
+    {
+        "title": "Firebase Backup Tool",
+        "git_url": "https://github.com/rbshah29/firebase-backup",
+        "description": "A command-line tool to backup and restore Firebase Firestore and Storage data. It uses Firebase Admin SDK to interact with Firebase services and allows users to schedule backups using cron jobs.",
+        "techs": ["Firebase", "Terminal", "GCloud"]
     }
 ]
