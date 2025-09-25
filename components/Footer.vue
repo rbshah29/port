@@ -1,7 +1,9 @@
 <template>
     <footer class="rounded-lg shadow m-4 dark:bg-gray-900">
         <div class="flex items-center justify-between p-4">
-            <span class="text-sm text-center text-gray-500 dark:text-gray-400">@2025 Rutvik Shah</span>
+            <span class="text-sm text-center text-gray-500 dark:text-gray-400">
+                <small>© 2025 Rbshah | All Rights Reserved</small>
+            </span>
             <div class="heartbeat-container">
                 <svg version="1.2" height="30" width="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
                     <path 
