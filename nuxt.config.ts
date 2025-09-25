@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     head: {
       title: 'Rutvik Shah',
       link: [
-        { rel: 'icon', type: 'image/png', href: '/icon.png' }  // if using .png
+        { rel: 'icon', type: 'image/png', href: '/test.png' }  // if using .png
       ]
     }
   },
