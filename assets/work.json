@@ -6,7 +6,7 @@
         "duration": "Sept. 2024 - Present",
         "link": "https://www.evodev.ca/",
         "technology": "Python, JS, SQL Alchemy,  MySql, Microsoft Graph API, Docker, Flutter, Nuxt.js",
-        "summary": "Currently working with flutter application using Firebase DB and Sqlite DB. Worked with Point in time backup and restoration of databases. Engaged in various updates requested by clients for web applications, specifically related to calibration systems and construction management. Collaborated with Outlook APIs, primarily utilizing the Microsoft Graph API to perform various CRUD operations for events and calendar management. Currently building tablet application using Python's buildozer library. Led multiple projects focused on migrating legacy code from Python 2.7 to Python 3, ensuring a smooth transition and improved performance."
+        "summary": "Developed and maintained cross-platform mobile applications using Flutter, integrated with Firebase and SQLite for efficient data handling. Designed and implemented database backup and restoration solutions, ensuring data integrity and minimizing downtime. Enhanced web applications for calibration systems and construction management, delivering client-requested updates and features.Integrated Microsoft Graph API with Outlook, enabling seamless calendar and event CRUD operations. Built tablet applications using Python and Buildozer, optimizing performance for field use. Led migration of legacy systems from Python 2.7 to 3.11, improving system performance, maintainability, and long-term support."
     },
     {
         "id": "tabs-with-underline-2",
@@ -15,7 +15,7 @@
         "duration": "Jan. 2024 - Sept. 2024",
         "link": "https://www.coldchainscience.com/",
         "technology": "Python, Nuxt.js, FastAPI, Java, JavaScript, SQL Alchemy, PostgreSQL, MongoDB, Google Map API, Docker",
-        "summary": "Identified and fixed key issues in the Java monitoring system, enhancing code performance and data integration with PostgreSQL, which boosted system reliability. Also implementing a new project that incorporates a modern tech stack for efficient development and performance. Architected the back end with Python, employing SQL Alchemy for effective database interactions and FastAPI for robust API development. Front-end incorporates Nuxt.js for better user interaction. Worked with Tailwind CSS and implemented Postgres as the database"
+        "summary": "Here I got to play with a modern stack — Python, FastAPI, Nuxt.js, PostgreSQL, MongoDB, and even Docker. I fixed performance issues in a Java monitoring system, then helped build a new project from scratch with a solid backend (FastAPI + SQLAlchemy) and a frontend powered by Nuxt.js and Tailwind CSS. Basically, I made sure things ran fast and looked good. Also, worked with Tailwind CSS and implemented Postgres as the database"
     },
     {
         "id": "tabs-with-underline-3",
@@ -24,7 +24,7 @@
         "duration": "Sept. 2023 - Dec. 2023",
         "link": "https://www.thedevguys.in/",
         "technology": "Next.JS, Supabase, Prisma",
-        "summary": "Engineered and rigorously debugged a web application using Next.js and Supabase, significantly reducing error rates and enhancing user experience, which led to improved user retention. Developed a fully responsive blog web application featuring an intuitive dashboard for the efficient management of posts, bookmarks, and other essential functionalities. Enhanced the blog web app to be fully responsive, improving user engagement and increasing session duration"
+        "summary": "I worked on a web app with Next.js and Supabase, where I focused on debugging and polishing things up so users had a smoother experience (and actually stuck around longer). On the side, I built a fully responsive blog app with a clean dashboard for managing posts and bookmarks — and made sure it looked good and worked well on any screen.Enhanced the blog web app to be fully responsive, improving user engagement and increasing session duration"
     },
     {
         "id": "tabs-with-underline-4",
@@ -33,6 +33,6 @@
         "duration": "Feb. 2021 - June 2022",
         "link": "https://www.brainvire.com/",
         "technology": "Python, Odoo, PostgreSQL, Prisma, Docker, XML, JavaScript",
-        "summary": "Took charge of designing, developing, and integrating customer-specific features using Python to modularize system features and enhance scalability. Optimized database schemas and normalization in PostgreSQL, leading to significantly faster query performance. Orchestrated event-based monitoring for the Point of Sales (POS) application to identify performance bottlenecks, reducing the turnaround time for root cause analysis. Developed a modular and configurable framework that simplifies the integration of new payment systems, drastically reducing development time"
+        "summary": "I spent most of my time building out customer-specific features in Python and making the system more modular so it could scale better. I reworked PostgreSQL schemas to speed up queries, set up event-based monitoring for the POS app to catch issues quicker, and even built a framework that made it way easier to integrate new payment systems — cutting dev time down a lot."
     }
 ]

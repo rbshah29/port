@@ -26,7 +26,12 @@
                     role="tabpanel"
                     :aria-labelledby="tab.id"
                 >
-                    <h2 class="text-xl font-bold text-cyan-500"><a :href="tab.link" target="_blank">{{ tab.name }}</a></h2>
+                    <div class="">
+                        <h2 class="text-xl font-bold text-cyan-500"><a class="flex items-center space-x-2" :href="tab.link" target="_blank">{{ tab.name }}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 512 512"><path fill="none" stroke="#fffefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M448 64L64 240.14h200a8 8 0 0 1 8 8V448Z"/></svg>
+                            </a>
+                        </h2>
+                    </div>
                     <p class="text-sm  dark:text-gray-400">{{ tab.duration }}</p>
                     <div class="m-4">
                         <div class="flex flex-wrap gap-2 mt-4">

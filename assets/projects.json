@@ -1,5 +1,4 @@
 [
-    
     {
         "title": "Outlook Event Manager",
         "git_url": "https://github.com/rbshah29/outlook-manager",
@@ -22,6 +21,6 @@
         "title": "Firebase Backup Tool",
         "git_url": "https://github.com/rbshah29/firebase-backup",
         "description": "A command-line tool to backup and restore Firebase Firestore and Storage data. It uses Firebase Admin SDK to interact with Firebase services and allows users to schedule backups using cron jobs.",
-        "techs": ["Firebase", "Terminal", "GCloud"]
+        "techs": ["Firebase", "Terminal", "GCP"]
     }
 ]

@@ -6,7 +6,7 @@
           <Hero />
         </div>
         
-        <div class="w-full lg:w-2/3 p-4">
+        <div class="w-full lg:w-2/3 p-4" id="scroll">
           <About />
           <Experience />
           <Projects />
