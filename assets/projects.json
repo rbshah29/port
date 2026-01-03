@@ -22,5 +22,11 @@
         "git_url": "https://github.com/rbshah29/firebase-backup",
         "description": "A command-line tool to backup and restore Firebase Firestore and Storage data. It uses Firebase Admin SDK to interact with Firebase services and allows users to schedule backups using cron jobs.",
         "techs": ["Firebase", "Terminal", "GCP"]
+    },
+    {
+        "title": "Monitoring Dashboard",
+        "git_url": "https://github.com/rbshah29/monitoring",
+        "description": "A flexible monitoring solution that collects metrics from various sources and visualizes them in real-time dashboards. While this project includes rsnapshot backup monitoring as an example, you can send data from any source using simple curl commands or custom scripts.",
+        "techs": ["Grafana", "Telegraf", "InfluxDB", "Traefik", "Bash Scripting"]
     }
 ]
