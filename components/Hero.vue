@@ -31,7 +31,7 @@
                     <div class="m-4 relative bg-gray-950 text-white group inline-block">
                         <div class="absolute inset-0 bg-gradient-to-r from-teal-500 via-[#0047e1] to-[#0047e1] rounded-lg blur-xl opacity-10 group-hover:opacity-100 transition duration-300"></div>
                         <button class="relative rounded-md bg-gradient-to-r from-teal-500 via-[#0047e1] to-[#0047e1] text-white font-semibold p-0.5">
-                          <span class="flex w-full bg-gray-900 text-white rounded px-6 py-2 font-medium"> <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> </span>
+                          <span class="flex w-full bg-gray-900 text-white rounded px-6 py-2 font-medium"> <a href="/Rutvik-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> </span>
                         </button>
                       </div>
                       <div class="m-4 relative bg-gray-950 text-white group inline-block">
