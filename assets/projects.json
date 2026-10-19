@@ -3,30 +3,65 @@
         "title": "Outlook Event Manager",
         "git_url": "https://github.com/rbshah29/outlook-manager",
         "description": "Outlook Event manager uses Graph API to fetch events from Outlook calendar and display them in a user-friendly way. It also allows users to create, update, and delete events.",
-        "techs": ["Python", "Flask", "Microsoft Graph API","Docker"]
+        "techs": [
+            "Python",
+            "Flask",
+            "Microsoft Graph API",
+            "Docker"
+        ]
     },
     {
         "title": "Weather Forecast API",
         "git_url": "https://github.com/rbshah29/get-temp-backend",
         "description": "This project is a FastAPI web service that fetches and visualizes weather data based on latitude and longitude coordinates. It includes various API available in fastapi docs section.",
-        "techs": ["Python", "Fast API", "Open Meteo API"]
+        "techs": [
+            "Python",
+            "Fast API",
+            "Open Meteo API"
+        ]
     },
     {
-        "title": "NoteKeep - Mimic of Google Keep",
-        "git_url": "https://github.com/rbshah29/notekeep",
-        "description": "This Notepad application, allows users to create, read, and delete notes. It also includes authentication and collaboration features with explicit permissions, search functionality, and uses MongoDB for data storage.",
-        "techs": ["Node.js", "Nuxt.js", "Tailwind CSS", "MongoDB"]
+        "title": "Notebook",
+        "git_url": "https://github.com/rbshah29/notebook",
+        "description": "An online code and text editor in the spirit of Sublime Text, right in the browser. Spin up temporary files, write and edit without any setup, with Supabase handling storage behind the scenes.",
+        "techs": [
+            "Next.js",
+            "Supabase"
+        ]
     },
     {
         "title": "Firebase Backup Tool",
         "git_url": "https://github.com/rbshah29/firebase-backup",
         "description": "A command-line tool to backup and restore Firebase Firestore and Storage data. It uses Firebase Admin SDK to interact with Firebase services and allows users to schedule backups using cron jobs.",
-        "techs": ["Firebase", "Terminal", "GCP"]
+        "techs": [
+            "Firebase",
+            "Terminal",
+            "GCP"
+        ]
     },
     {
         "title": "Monitoring Dashboard",
         "git_url": "https://github.com/rbshah29/monitoring",
         "description": "A flexible monitoring solution that collects metrics from various sources and visualizes them in real-time dashboards. While this project includes rsnapshot backup monitoring as an example, you can send data from any source using simple curl commands or custom scripts.",
-        "techs": ["Grafana", "Telegraf", "InfluxDB", "Traefik", "Bash Scripting"]
+        "techs": [
+            "Grafana",
+            "Telegraf",
+            "InfluxDB",
+            "Traefik",
+            "Bash Scripting"
+        ]
+    },
+    {
+        "title": "Daily Desk Chess",
+        "git_url": "https://github.com/rbshah29/chess",
+        "live_url": "https://chess-alpha-wine.vercel.app/",
+        "status": "Work in progress",
+        "description": "Play the computer from 500 to 2500 Elo, or a friend locally with timed games. Choose your color, time control and theme, promote pawns, resign and review the move notation. Rules run on chess.js; the custom minimax engine is still being tuned, so it can misjudge positions or occasionally stall.",
+        "techs": [
+            "Nuxt 4",
+            "Vue 3",
+            "chess.js",
+            "Minimax"
+        ]
     }
 ]

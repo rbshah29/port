@@ -15,7 +15,7 @@
         "duration": "Jan. 2024 - Sept. 2024",
         "link": "https://www.coldchainscience.com/",
         "technology": "Python, Nuxt.js, FastAPI, Java, JavaScript, SQL Alchemy, PostgreSQL, MongoDB, Google Map API, Docker",
-        "summary": "Here I got to play with a modern stack — Python, FastAPI, Nuxt.js, PostgreSQL, MongoDB, and even Docker. I fixed performance issues in a Java monitoring system, then helped build a new project from scratch with a solid backend (FastAPI + SQLAlchemy) and a frontend powered by Nuxt.js and Tailwind CSS. Basically, I made sure things ran fast and looked good. Also, worked with Tailwind CSS and implemented Postgres as the database"
+        "summary": "Here I got to play with a modern stack Python, FastAPI, Nuxt.js, PostgreSQL, MongoDB, and even Docker. I fixed performance issues in a Java monitoring system, then helped build a new project from scratch with a solid backend (FastAPI + SQLAlchemy) and a frontend powered by Nuxt.js and Tailwind CSS. Basically, I made sure things ran fast and looked good. Also, worked with Tailwind CSS and implemented Postgres as the database"
     },
     {
         "id": "tabs-with-underline-3",
@@ -24,7 +24,7 @@
         "duration": "Sept. 2023 - Dec. 2023",
         "link": "https://www.thedevguys.in/",
         "technology": "Next.JS, Supabase, Prisma",
-        "summary": "I worked on a web app with Next.js and Supabase, where I focused on debugging and polishing things up so users had a smoother experience (and actually stuck around longer). On the side, I built a fully responsive blog app with a clean dashboard for managing posts and bookmarks — and made sure it looked good and worked well on any screen.Enhanced the blog web app to be fully responsive, improving user engagement and increasing session duration"
+        "summary": "I worked on a web app with Next.js and Supabase, where I focused on debugging and polishing things up so users had a smoother experience (and actually stuck around longer). On the side, I built a fully responsive blog app with a clean dashboard for managing posts and bookmarks and made sure it looked good and worked well on any screen.Enhanced the blog web app to be fully responsive, improving user engagement and increasing session duration"
     },
     {
         "id": "tabs-with-underline-4",
@@ -33,6 +33,6 @@
         "duration": "Feb. 2021 - June 2022",
         "link": "https://www.brainvire.com/",
         "technology": "Python, Odoo, PostgreSQL, Prisma, Docker, XML, JavaScript",
-        "summary": "I spent most of my time building out customer-specific features in Python and making the system more modular so it could scale better. I reworked PostgreSQL schemas to speed up queries, set up event-based monitoring for the POS app to catch issues quicker, and even built a framework that made it way easier to integrate new payment systems — cutting dev time down a lot."
+        "summary": "I spent most of my time building out customer-specific features in Python and making the system more modular so it could scale better. I reworked PostgreSQL schemas to speed up queries, set up event-based monitoring for the POS app to catch issues quicker, and even built a framework that made it way easier to integrate new payment systems cutting dev time down a lot."
     }
 ]
