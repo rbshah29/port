@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="contact reveal px-6 py-14 sm:px-12">
+  <section id="contact" class="reveal">
     <p class="eyebrow flex items-center gap-3">
       <span>04</span>
       <span class="h-px w-10" style="background: linear-gradient(90deg, var(--imperial), var(--mint))"></span>
@@ -63,17 +63,6 @@ const send = async () => {
 </script>
 
 <style scoped>
-.contact {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1.25rem;
-  border: 1px solid var(--line);
-  background:
-    radial-gradient(70% 90% at 0% 0%, rgba(0, 35, 149, 0.55), transparent 70%),
-    radial-gradient(60% 80% at 100% 100%, rgba(88, 111, 124, 0.3), transparent 70%),
-    #05080a;
-}
-
 .field {
   width: 100%;
   border-radius: 0.5rem;
