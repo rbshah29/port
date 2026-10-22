@@ -2,9 +2,7 @@
     <div class="flex h-full flex-col justify-between gap-10">
         <div>
             <div class="flex items-center gap-4">
-                <div class="avatar">
-                    <img :src="profile" alt="Rutvik Shah" class="relative h-[4.2rem] w-[4.2rem] rounded-full object-cover" style="object-position: 52% 26%;">
-                </div>
+                <img :src="profile" alt="Rutvik Shah" class="h-[7rem] w-[7rem] object-cover">
                 <div>
                     <p class="text-sm font-medium">Software Developer</p>
                     <p class="mt-0.5 inline-flex items-center gap-1 text-xs" style="color: var(--muted);">
@@ -16,7 +14,7 @@
                 </div>
             </div>
 
-            <p class="eyebrow mt-10">Hi, my name is</p>
+            <p class="eyebrow mt-10">Hi, i am</p>
             <h1 class="mt-3 font-display text-5xl font-semibold leading-none tracking-tight xl:text-6xl" aria-label="Rutvik Shah">
                 <span
                     v-for="(char, i) in 'Rutvik Shah'"
@@ -75,7 +73,7 @@
 </template>
 
 <script setup>
-import profile from '~/assets/profile.jpg'
+import profile from '~/assets/profile.png'
 
 const { copyEmail } = useCopyEmail()
 
@@ -105,24 +103,6 @@ onBeforeUnmount(() => clearInterval(wordTimer))
 </script>
 
 <style scoped>
-/* Slowly turning imperial → light-blue ring around the photo */
-.avatar {
-    position: relative;
-    padding: 2px;
-    border-radius: 9999px;
-    overflow: hidden;
-    isolation: isolate;
-}
-
-.avatar::before {
-    content: '';
-    position: absolute;
-    inset: -50%;
-    z-index: -1;
-    background: conic-gradient(var(--imperial), var(--mint), var(--slate), var(--imperial));
-    animation: spin 6s linear infinite;
-}
-
 .letter {
     display: inline-block;
     opacity: 0;

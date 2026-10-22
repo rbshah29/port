@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    public: {
+      // Public Web3Forms access key (safe to expose; it only delivers to my inbox)
+      web3formsKey: '0b027a67-9fc7-49ea-88bb-34b31acecff9',
+    },
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
