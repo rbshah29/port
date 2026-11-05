@@ -23,6 +23,8 @@
       </div>
     </div>
 
+    <Mascot />
+
     <Transition name="toast">
       <div v-if="toast" class="toast" role="status">{{ toast }}</div>
     </Transition>
