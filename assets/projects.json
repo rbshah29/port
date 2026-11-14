@@ -8,7 +8,27 @@
             "JavaScript",
             "GTK / WebKit",
             "Git"
-        ]
+        ],
+        "featured": true,
+        "image": "/projects/ggit.webp",
+        "image_alt": "ggit showing a repository commit graph with coloured branch lanes",
+        "image_label": "ggit — desktop app"
+    },
+    {
+        "title": "Daily Desk Chess",
+        "git_url": "https://github.com/rbshah29/chess",
+        "live_url": "https://chess-alpha-wine.vercel.app/",
+        "status": "Work in progress",
+        "description": "Play the computer from 500 to 2500 Elo, or a friend locally with timed games. Choose your color, time control and theme, promote pawns, resign and review the move notation. Rules run on chess.js; the custom minimax engine is still being tuned, so it can misjudge positions or occasionally stall.",
+        "techs": [
+            "Nuxt 4",
+            "Vue 3",
+            "chess.js",
+            "Minimax"
+        ],
+        "featured": true,
+        "image": "/projects/chess.webp",
+        "image_alt": "Daily Desk Chess game board mid-game with move notation panel"
     },
     {
         "title": "Outlook Event Manager",
@@ -29,7 +49,8 @@
             "Python",
             "Fast API",
             "Open Meteo API"
-        ]
+        ],
+        "hidden": true
     },
     {
         "title": "Notebook",
@@ -60,19 +81,6 @@
             "InfluxDB",
             "Traefik",
             "Bash Scripting"
-        ]
-    },
-    {
-        "title": "Daily Desk Chess",
-        "git_url": "https://github.com/rbshah29/chess",
-        "live_url": "https://chess-alpha-wine.vercel.app/",
-        "status": "Work in progress",
-        "description": "Play the computer from 500 to 2500 Elo, or a friend locally with timed games. Choose your color, time control and theme, promote pawns, resign and review the move notation. Rules run on chess.js; the custom minimax engine is still being tuned, so it can misjudge positions or occasionally stall.",
-        "techs": [
-            "Nuxt 4",
-            "Vue 3",
-            "chess.js",
-            "Minimax"
         ]
     }
 ]

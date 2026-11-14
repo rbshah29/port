@@ -58,7 +58,7 @@ import projects from 'assets/projects.json';
 const stats = [
     { prefix: '~', value: 4, label: 'years building software' },
     { value: work.length, label: 'companies worked with' },
-    { value: projects.length, label: 'featured side projects' },
+    { value: projects.filter((p) => !p.hidden).length, label: 'featured side projects' },
 ];
 
 // Numbers count up from 0 the first time the stats row scrolls into view
