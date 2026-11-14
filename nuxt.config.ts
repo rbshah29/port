@@ -89,5 +89,15 @@ export default defineNuxtConfig({
     },
   },
 
+  hooks: {
+    // Three.js (~190 KB gz) is only needed for the 3D mascot, which loads it on demand on
+    // desktop. Don't let Nuxt prefetch it on every visit (phones never show the mascot).
+    'build:manifest'(manifest) {
+      for (const [key, entry] of Object.entries(manifest)) {
+        if (key.includes('node_modules/three/')) entry.prefetch = false
+      }
+    },
+  },
+
   compatibilityDate: '2025-01-06',
 })

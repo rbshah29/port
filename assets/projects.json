@@ -1,5 +1,16 @@
 [
     {
+        "title": "ggit",
+        "git_url": "https://github.com/rbshah29/ggit",
+        "description": "A friendly git history viewer, like gitk but easier to read. Coloured commit graph with branch path tracing, plain-English explanations of merges and staged changes, ahead/behind counts, diffs and search. Runs as a native Linux desktop app and handles repos with tens of thousands of commits.",
+        "techs": [
+            "Python",
+            "JavaScript",
+            "GTK / WebKit",
+            "Git"
+        ]
+    },
+    {
         "title": "Outlook Event Manager",
         "git_url": "https://github.com/rbshah29/outlook-manager",
         "description": "Outlook Event manager uses Graph API to fetch events from Outlook calendar and display them in a user-friendly way. It also allows users to create, update, and delete events.",
