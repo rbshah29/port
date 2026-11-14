@@ -32,6 +32,15 @@
 </template>
 
 <script setup>
+// This is a single-page site with no pages/ directory, so app.vue would otherwise
+// render (with 200 OK) for any URL. Return a real 404 for anything other than "/"
+// so search engines don't index unknown paths as duplicates of the homepage.
+// Static files in public/ (sitemap, resume, images) are served before this runs.
+const route = useRoute()
+if (route.path !== '/') {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
+
 const { toast } = useCopyEmail()
 
 const progress = ref(0)
