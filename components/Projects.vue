@@ -151,7 +151,7 @@ const GITHUB_PATH = 'M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.
 
 .featured:hover .preview {
     border-color: var(--line-strong);
-    box-shadow: 0 24px 50px -26px rgba(0, 35, 149, 0.9);
+    box-shadow: 0 24px 50px -26px rgba(65, 93, 67, 0.9);
 }
 
 /* Little browser-window chrome above the screenshot */
@@ -212,8 +212,8 @@ const GITHUB_PATH = 'M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.
     font-family: theme('fontFamily.mono');
     font-size: 11px;
     color: var(--mint);
-    background: rgba(0, 35, 149, 0.35);
-    border: 1px solid rgba(61, 95, 209, 0.55);
+    background: rgba(65, 93, 67, 0.35);
+    border: 1px solid rgba(111, 160, 114, 0.55);
 }
 
 /* ---------- Compact cards ---------- */
@@ -225,8 +225,8 @@ const GITHUB_PATH = 'M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.
     height: 2.25rem;
     border-radius: 0.6rem;
     color: var(--mint);
-    background: rgba(0, 35, 149, 0.35);
-    border: 1px solid rgba(61, 95, 209, 0.55);
+    background: rgba(65, 93, 67, 0.35);
+    border: 1px solid rgba(111, 160, 114, 0.55);
     transition: transform 0.3s ease;
 }
 

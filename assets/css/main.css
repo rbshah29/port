@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-    /* Palette: Black · Blue Slate · Light Blue · Ghost White · Imperial Blue */
+    /* Palette: Black · Blue Slate · Light Blue · Ghost White · Forest Green (--imperial) */
     --black: #000000;
     --slate: #586f7c;
     --mint: #b8dbd9;
     --ghost: #f4f4f9;
-    --imperial: #002395;
-    --imperial-light: #3d5fd1;
+    --imperial: #415d43;
+    --imperial-light: #6fa072;
 
     --bg: #030405;
     --surface: rgba(88, 111, 124, 0.08);
@@ -100,7 +100,7 @@
     .card-hover:hover {
         border-color: var(--line-strong);
         transform: translateY(-3px);
-        box-shadow: 0 18px 40px -24px rgba(0, 35, 149, 0.95);
+        box-shadow: 0 18px 40px -24px rgba(65, 93, 67, 0.95);
     }
 
     .pill {
@@ -113,7 +113,7 @@
 
     .pill:hover {
         color: var(--ghost);
-        background: rgba(0, 35, 149, 0.45);
+        background: rgba(65, 93, 67, 0.45);
         border-color: var(--imperial-light);
     }
 
@@ -130,9 +130,9 @@
     }
 
     .btn-primary:hover {
-        background: #0a33c2;
+        background: #4d6e50;
         transform: translateY(-2px);
-        box-shadow: 0 12px 30px -10px #0a33c2;
+        box-shadow: 0 12px 30px -10px #4d6e50;
     }
 
     .btn-ghost {
@@ -165,8 +165,20 @@
         animation: drift 30s ease-in-out infinite alternate;
     }
 
-    .glow-imperial { width: 42vmax; height: 42vmax; top: -16vmax; left: -14vmax; background: var(--imperial); opacity: 0.5; }
-    .glow-slate { width: 38vmax; height: 38vmax; bottom: -18vmax; right: -12vmax; background: var(--slate); opacity: 0.3; animation-duration: 36s; animation-delay: -12s; }
+    /* Ring centred on the viewport; one full turn every 70s, starting with the accent top-left */
+    .glow-orbit {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 92vmax;
+        height: 92vmax;
+        margin: -46vmax 0 0 -46vmax;
+        animation: orbit 15s linear infinite;
+        will-change: transform;
+    }
+
+    .glow-imperial { width: 62vmax; height: 62vmax; top: 0; left: 50%; margin: -31vmax 0 0 -31vmax; background: var(--imperial); opacity: 0.5; }
+    .glow-slate { width: 52vmax; height: 52vmax; bottom: 0; left: 50%; margin: 0 0 -26vmax -26vmax; background: var(--slate); opacity: 0.3; animation-duration: 36s; animation-delay: -12s; }
     .glow-mint { width: 24vmax; height: 24vmax; top: 40%; left: 45%; background: var(--mint); opacity: 0.06; animation-duration: 42s; animation-delay: -20s; }
 }
 
@@ -181,6 +193,11 @@
 .reveal-ready .reveal.is-visible {
     opacity: 1;
     transform: none;
+}
+
+@keyframes orbit {
+    from { transform: rotate(-45deg); }
+    to { transform: rotate(315deg); }
 }
 
 @keyframes drift {

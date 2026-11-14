@@ -1,8 +1,12 @@
 <template>
   <div class="relative min-h-screen">
     <div class="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
-      <span class="glow glow-imperial"></span>
-      <span class="glow glow-slate"></span>
+      <!-- Accent + slate glows sit on opposite sides of a slowly rotating ring,
+           so the colour travels around the edges instead of parking in one corner -->
+      <div class="glow-orbit">
+        <span class="glow glow-imperial"></span>
+        <span class="glow glow-slate"></span>
+      </div>
       <span class="glow glow-mint"></span>
     </div>
     <div class="progress" :style="{ transform: `scaleX(${progress})` }" aria-hidden="true"></div>
