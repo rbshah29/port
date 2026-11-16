@@ -1,18 +1,20 @@
 <template>
   <div class="relative min-h-screen">
     <div class="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
-      <!-- Accent + slate glows sit on opposite sides of a slowly rotating ring,
-           so the colour travels around the edges instead of parking in one corner -->
-      <div class="glow-orbit">
-        <span class="glow glow-imperial"></span>
-        <span class="glow glow-slate"></span>
-      </div>
-      <span class="glow glow-mint"></span>
-      <span class="grain"></span>
+      <DotGridBackground v-if="!noWebgl" @unsupported="noWebgl = true" />
+      <!-- Fallback when WebGL is unavailable: CSS glows on a slowly rotating ring -->
+      <template v-else>
+        <div class="glow-orbit">
+          <span class="glow glow-imperial"></span>
+          <span class="glow glow-slate"></span>
+        </div>
+        <span class="glow glow-mint"></span>
+        <span class="grain"></span>
+      </template>
     </div>
     <div class="progress" :style="{ transform: `scaleX(${progress})` }" aria-hidden="true"></div>
 
-    <div class="relative mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+    <div class="relative mx-auto max-w-7xl 2xl:max-w-[88rem] px-5 sm:px-8 lg:px-12">
       <div class="lg:grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
         <aside class="no-scrollbar pt-14 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto lg:py-20">
           <Hero />
@@ -47,6 +49,8 @@ if (route.path !== '/') {
 }
 
 const { toast } = useCopyEmail()
+
+const noWebgl = ref(false)
 
 const progress = ref(0)
 let observer
