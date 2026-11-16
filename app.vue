@@ -8,6 +8,7 @@
         <span class="glow glow-slate"></span>
       </div>
       <span class="glow glow-mint"></span>
+      <span class="grain"></span>
     </div>
     <div class="progress" :style="{ transform: `scaleX(${progress})` }" aria-hidden="true"></div>
 

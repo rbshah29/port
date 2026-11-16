@@ -251,6 +251,8 @@ const sim = {
   last: 0,
 }
 let calm = false // prefers-reduced-motion: keep cursor tracking, drop ambient motion
+let touch = false // no mouse: tap to pet / poke
+let lastTap = 0
 let lastMove = Date.now()
 let pokes = 0
 let heartId = 0
@@ -503,6 +505,22 @@ const onLeave = () => {
 
 // Pokes: grumpy right away, fire if you keep going. Forgives you after a moment.
 const onPoke = async () => {
+  // Touch has no hover, so a single tap is the "pet" (hearts); tapping again quickly is a poke
+  const now = Date.now()
+  const quickRetap = now - lastTap < 1500
+  lastTap = now
+  if (touch && !annoyed.value && !quickRetap) {
+    clearTimeout(leaveTimer)
+    hovering.value = true
+    startLove()
+    leaveTimer = setTimeout(() => {
+      hovering.value = false
+      stopLove()
+      lastMove = Date.now()
+    }, 2000)
+    return
+  }
+
   poked.value = false
   await nextTick()
   poked.value = true
@@ -526,9 +544,9 @@ const onPoke = async () => {
 }
 
 onMounted(() => {
-  // Only for mouse users; on touch screens it would just sit on top of content
-  enabled.value = window.matchMedia('(hover: hover) and (pointer: fine)').matches
-  if (!enabled.value) return
+  // Touch screens get a smaller dragon (see CSS) that looks at taps instead of a cursor
+  touch = !window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  enabled.value = true
   calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   // Upgrade to 3D only after the page has fully loaded and the browser is idle,
   // so Three.js never competes with the real content (or PageSpeed)
@@ -541,6 +559,7 @@ onMounted(() => {
     else window.addEventListener('load', start3d, { once: true })
   }
   window.addEventListener('pointermove', onPointerMove, { passive: true })
+  window.addEventListener('pointerdown', onPointerMove, { passive: true })
   window.addEventListener('scroll', lift, { passive: true })
   window.addEventListener('resize', lift)
   nextTick(lift)
@@ -551,6 +570,7 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener('pointermove', onPointerMove)
+  window.removeEventListener('pointerdown', onPointerMove)
   window.removeEventListener('scroll', lift)
   window.removeEventListener('resize', lift)
   cancelAnimationFrame(frame)
@@ -737,5 +757,14 @@ onBeforeUnmount(() => {
 
 @media (prefers-reduced-motion: reduce) {
   .kiri *, .kiri { animation: none !important; }
+}
+
+/* Touch screens: smaller and tucked into the corner so it covers less content */
+@media not all and (hover: hover) and (pointer: fine) {
+  .mascot {
+    right: 0.5rem;
+    transform: scale(0.7);
+    transform-origin: bottom right;
+  }
 }
 </style>
