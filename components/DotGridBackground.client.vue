@@ -38,8 +38,8 @@ uniform float uMouseOn; // 0..1, fades out when the pointer leaves
 uniform float uScroll;  // CSS px
 uniform vec4 uRipples[${MAX_RIPPLES}]; // xy = origin (CSS px), z = start time, w = active
 
-const vec3 BG  = vec3(0.012, 0.016, 0.020); // #030405
-const vec3 DOT = vec3(0.776, 0.675, 0.561); // #c6ac8f
+uniform vec3 uBg;  // page background, from --bg-rgb
+uniform vec3 uDot; // dot colour, from --dot-rgb
 const float GAP = 28.0;        // grid spacing, CSS px
 const float HOVER_R = 260.0;   // cursor influence radius
 const float RIPPLE_SPEED = 420.0;
@@ -120,10 +120,10 @@ void main() {
     }
   }
 
-  vec3 col = mix(BG, DOT, clamp(a, 0.0, 1.0));
+  vec3 col = mix(uBg, uDot, clamp(a, 0.0, 1.0));
 
   // Very soft light pooled under the cursor
-  col += DOT * uMouseOn * falloff(distance(px, uMouse), 440.0) * 0.035;
+  col += uDot * uMouseOn * falloff(distance(px, uMouse), 440.0) * 0.035;
 
   gl_FragColor = vec4(col, 1.0);
 }
@@ -137,6 +137,12 @@ let reducedMotion = false
 const mouse = { x: -9999, y: -9999, tx: -9999, ty: -9999, on: 0, onTarget: 0 }
 const ripples = new Float32Array(MAX_RIPPLES * 4)
 let nextRipple = 0
+// Colours (0..1 RGB) come from the CSS palette so there's a single source of truth
+const palette = { bg: [0, 0, 0], dot: [0, 0, 0] }
+
+const readCssRgb = (name) => getComputedStyle(document.documentElement)
+  .getPropertyValue(name).split(',').map((v) => Number(v.trim()) / 255)
+
 
 const now = () => (performance.now() - start) / 1000
 
@@ -183,6 +189,8 @@ const draw = () => {
   gl.uniform1f(uniforms.uMouseOn, mouse.on)
   gl.uniform1f(uniforms.uScroll, window.scrollY)
   gl.uniform4fv(uniforms.uRipples, ripples)
+  gl.uniform3fv(uniforms.uBg, palette.bg)
+  gl.uniform3fv(uniforms.uDot, palette.dot)
   gl.drawArrays(gl.TRIANGLES, 0, 3)
 }
 
@@ -245,12 +253,15 @@ onMounted(async () => {
   gl.enableVertexAttribArray(loc)
   gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0)
 
-  for (const name of ['uRes', 'uDpr', 'uTime', 'uMouse', 'uMouseOn', 'uScroll', 'uRipples']) {
+  for (const name of ['uRes', 'uDpr', 'uTime', 'uMouse', 'uMouseOn', 'uScroll', 'uRipples', 'uBg', 'uDot']) {
     uniforms[name] = gl.getUniformLocation(program, name)
   }
 
   reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   start = performance.now()
+
+  palette.bg = readCssRgb('--bg-rgb')
+  palette.dot = readCssRgb('--dot-rgb')
 
   resizeObserver = new ResizeObserver(resize)
   resizeObserver.observe(el)

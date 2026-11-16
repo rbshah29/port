@@ -67,7 +67,7 @@ const send = async () => {
   width: 100%;
   border-radius: 0.5rem;
   border: 1px solid var(--line);
-  background: rgba(3, 4, 5, 0.55);
+  background: rgba(var(--bg-rgb), 0.55);
   padding: 0.6rem 0.85rem;
   font-size: 0.875rem;
   color: var(--text);
@@ -81,7 +81,7 @@ const send = async () => {
 .field:focus {
   outline: none;
   border-color: var(--line-strong);
-  background: rgba(3, 4, 5, 0.8);
+  background: rgba(var(--bg-rgb), 0.8);
 }
 
 .btn:disabled {

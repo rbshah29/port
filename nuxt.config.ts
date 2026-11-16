@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: SITE_DESCRIPTION },
         { name: 'author', content: 'Rutvik Shah' },
-        { name: 'theme-color', content: '#0c0c0d' },
+        { name: 'theme-color', content: '#01021e' },
 
         // Social previews (LinkedIn, Slack, iMessage, X, ...)
         { property: 'og:type', content: 'website' },

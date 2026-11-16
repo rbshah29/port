@@ -119,7 +119,7 @@ onBeforeUnmount(() => {
   border-radius: 0.5rem;
   font-size: 0.875rem;
   color: var(--text);
-  background: #0a1114;
+  background: var(--toast-bg);
   border: 1px solid var(--imperial-light);
   box-shadow: 0 12px 30px -14px var(--imperial);
 }

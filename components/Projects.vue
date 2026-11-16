@@ -144,14 +144,14 @@ const GITHUB_PATH = 'M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.
     overflow: hidden;
     border-radius: 0.75rem;
     border: 1px solid var(--line);
-    background: #0b0f12;
+    background: var(--panel);
     box-shadow: 0 20px 40px -28px rgba(0, 0, 0, 0.9);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .featured:hover .preview {
     border-color: var(--line-strong);
-    box-shadow: 0 24px 50px -26px rgba(65, 93, 67, 0.9);
+    box-shadow: 0 24px 50px -26px rgba(var(--imperial-rgb), 0.9);
 }
 
 /* Little browser-window chrome above the screenshot */
@@ -161,14 +161,14 @@ const GITHUB_PATH = 'M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.
     gap: 0.4rem;
     padding: 0.55rem 0.75rem;
     border-bottom: 1px solid var(--line);
-    background: rgba(88, 111, 124, 0.08);
+    background: rgba(var(--slate-rgb), 0.08);
 }
 
 .preview-bar .dot {
     width: 0.55rem;
     height: 0.55rem;
     border-radius: 9999px;
-    background: rgba(164, 180, 188, 0.35);
+    background: rgba(var(--muted-rgb), 0.35);
 }
 
 .preview-bar .dot:first-child { background: rgba(255, 95, 87, 0.7); }
@@ -212,8 +212,8 @@ const GITHUB_PATH = 'M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.
     font-family: theme('fontFamily.mono');
     font-size: 11px;
     color: var(--mint);
-    background: rgba(65, 93, 67, 0.35);
-    border: 1px solid rgba(111, 160, 114, 0.55);
+    background: rgba(var(--imperial-rgb), 0.35);
+    border: 1px solid rgba(var(--imperial-light-rgb), 0.55);
 }
 
 /* ---------- Compact cards ---------- */
@@ -225,8 +225,8 @@ const GITHUB_PATH = 'M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.
     height: 2.25rem;
     border-radius: 0.6rem;
     color: var(--mint);
-    background: rgba(65, 93, 67, 0.35);
-    border: 1px solid rgba(111, 160, 114, 0.55);
+    background: rgba(var(--imperial-rgb), 0.35);
+    border: 1px solid rgba(var(--imperial-light-rgb), 0.55);
     transition: transform 0.3s ease;
 }
 
