@@ -5,7 +5,6 @@
 <script setup>
 // Full-screen WebGL background: a faint field of randomly scattered dots that
 //  - swell and brighten around the cursor,
-//  - send out a ripple ring on every click/tap,
 //  - breathe with a slow ambient wave so it's alive on touch screens too,
 //  - scroll with a slight parallax (slower than the content).
 // If WebGL is unavailable it emits `unsupported` so the parent can fall back to the CSS glows.
@@ -14,8 +13,6 @@ const emit = defineEmits(['unsupported'])
 const canvas = ref(null)
 const ready = ref(false)
 
-const MAX_RIPPLES = 6
-const RIPPLE_LIFE = 1.8 // seconds; must match the fade in the shader
 const PARALLAX = 0.25 // grid moves at 25% of scroll speed
 
 const vertexSrc = `
@@ -36,14 +33,12 @@ uniform float uTime;    // seconds
 uniform vec2 uMouse;    // CSS px, viewport, smoothed
 uniform float uMouseOn; // 0..1, fades out when the pointer leaves
 uniform float uScroll;  // CSS px
-uniform vec4 uRipples[${MAX_RIPPLES}]; // xy = origin (CSS px), z = start time, w = active
 
 uniform vec3 uBg;  // page background, from --bg-rgb
 uniform vec3 uDot; // dot colour, from --dot-rgb
+uniform vec3 uHover; // hover dot colour, from --dot-hover-rgb
 const float GAP = 28.0;        // grid spacing, CSS px
-const float HOVER_R = 260.0;   // cursor influence radius
-const float RIPPLE_SPEED = 420.0;
-const float RIPPLE_WIDTH = 46.0;
+const float HOVER_R = 380.0;   // cursor influence radius
 
 // 1 at d = 0, falling smoothly to 0 at d = r
 float falloff(float d, float r) { return 1.0 - smoothstep(0.0, r, d); }
@@ -61,11 +56,11 @@ float edgeFade(vec2 c) {
   return 0.4 + 0.6 * falloff(length((uv - 0.5) * vec2(1.1, 1.0)), 0.95);
 }
 
-// Brightness contribution of the dot living in grid cell n at pixel px
-float dotAt(vec2 n, vec2 px, float shift) {
+// Brightness of the dot in grid cell n at pixel px: x = total, y = share from hover
+vec2 dotAt(vec2 n, vec2 px, float shift) {
   vec2 r = hash2(n);
   vec2 r2 = hash2(n + 17.31);
-  if (r2.x < 0.16) return 0.0; // leave some cells empty to break up the pattern
+  if (r2.x < 0.16) return vec2(0.0); // leave some cells empty to break up the pattern
 
   // Scattered anywhere inside its cell (jittered grid: random, but evenly spread)
   vec2 c = (n + 0.1 + 0.8 * r) * GAP - vec2(0.0, shift);
@@ -74,37 +69,23 @@ float dotAt(vec2 n, vec2 px, float shift) {
   float hover = uMouseOn * falloff(length(toMouse), HOVER_R);
   hover *= hover;
 
-  float ring = 0.0;
-  vec2 push = vec2(0.0);
-  for (int i = 0; i < ${MAX_RIPPLES}; i++) {
-    vec4 rp = uRipples[i];
-    if (rp.w < 0.5) continue;
-    float age = uTime - rp.z;
-    if (age < 0.0 || age > ${RIPPLE_LIFE.toFixed(1)}) continue;
-    vec2 away = c - rp.xy;
-    float d = length(away);
-    float band = falloff(abs(d - age * RIPPLE_SPEED), RIPPLE_WIDTH)
-               * (1.0 - smoothstep(0.0, ${RIPPLE_LIFE.toFixed(1)}, age));
-    ring += band;
-    push += (d > 0.001 ? away / d : vec2(0.0)) * band * 5.0;
-  }
-  ring = min(ring, 1.0);
-
   // Slow travelling wave plus a per-dot twinkle, so the field never looks static
   float amb = 0.5 + 0.5 * sin(c.x * 0.011 + c.y * 0.007 + uTime * 0.55)
                         * sin(c.y * 0.009 - c.x * 0.004 - uTime * 0.35);
   float twinkle = 0.75 + 0.25 * sin(uTime * (0.6 + r.y) + r.x * 6.2832);
 
-  // Dots lean slightly toward the cursor and get pushed outward by ripples
-  vec2 dotPos = c + push + (length(toMouse) > 0.001 ? normalize(toMouse) : vec2(0.0)) * hover * 3.0;
+  // Dots lean slightly toward the cursor
+  vec2 dotPos = c + (length(toMouse) > 0.001 ? normalize(toMouse) : vec2(0.0)) * hover * 3.0;
   float size = 0.65 + 0.8 * r2.y;
-  float radius = 1.1 * size + hover * 1.3 + ring * 1.3;
+  float radius = 1.1 * size + hover * 1.3;
 
   float aa = 1.0 / uDpr;
   float shape = 1.0 - smoothstep(radius - aa, radius + aa, distance(px, dotPos));
 
   float base = (0.17 + amb * 0.13) * twinkle * (0.6 + 0.6 * r2.x);
-  return shape * (base * edgeFade(c) + hover * 0.65 + ring * 0.55);
+  float h = hover * 0.45;
+  float total = base * edgeFade(c) + h;
+  return vec2(shape * total, h / max(total, 0.0001));
 }
 
 void main() {
@@ -113,17 +94,20 @@ void main() {
   vec2 cell = floor((px + vec2(0.0, shift)) / GAP);
 
   // Dots can sit anywhere in their cell, so check the neighbours too
-  float a = 0.0;
+  vec2 best = vec2(0.0);
   for (int y = -1; y <= 1; y++) {
     for (int x = -1; x <= 1; x++) {
-      a = max(a, dotAt(cell + vec2(float(x), float(y)), px, shift));
+      vec2 d = dotAt(cell + vec2(float(x), float(y)), px, shift);
+      if (d.x > best.x) best = d;
     }
   }
 
-  vec3 col = mix(uBg, uDot, clamp(a, 0.0, 1.0));
+  // Dots shift from their resting colour to the hover colour near the cursor
+  vec3 dotCol = mix(uDot, uHover, clamp(best.y * 1.5, 0.0, 1.0));
+  vec3 col = mix(uBg, dotCol, clamp(best.x, 0.0, 1.0));
 
   // Very soft light pooled under the cursor
-  col += uDot * uMouseOn * falloff(distance(px, uMouse), 440.0) * 0.035;
+  col += uHover * uMouseOn * falloff(distance(px, uMouse), 620.0) * 0.025;
 
   gl_FragColor = vec4(col, 1.0);
 }
@@ -135,10 +119,8 @@ let start = 0
 let dpr = 1
 let reducedMotion = false
 const mouse = { x: -9999, y: -9999, tx: -9999, ty: -9999, on: 0, onTarget: 0 }
-const ripples = new Float32Array(MAX_RIPPLES * 4)
-let nextRipple = 0
 // Colours (0..1 RGB) come from the CSS palette so there's a single source of truth
-const palette = { bg: [0, 0, 0], dot: [0, 0, 0] }
+const palette = { bg: [0, 0, 0], dot: [0, 0, 0], hover: [0, 0, 0] }
 
 const readCssRgb = (name) => getComputedStyle(document.documentElement)
   .getPropertyValue(name).split(',').map((v) => Number(v.trim()) / 255)
@@ -188,9 +170,9 @@ const draw = () => {
   gl.uniform2f(uniforms.uMouse, mouse.x, mouse.y)
   gl.uniform1f(uniforms.uMouseOn, mouse.on)
   gl.uniform1f(uniforms.uScroll, window.scrollY)
-  gl.uniform4fv(uniforms.uRipples, ripples)
   gl.uniform3fv(uniforms.uBg, palette.bg)
   gl.uniform3fv(uniforms.uDot, palette.dot)
+  gl.uniform3fv(uniforms.uHover, palette.hover)
   gl.drawArrays(gl.TRIANGLES, 0, 3)
 }
 
@@ -203,16 +185,6 @@ const onPointerMove = (e) => {
   mouse.tx = e.clientX
   mouse.ty = e.clientY
   mouse.onTarget = 1
-}
-
-const onPointerDown = (e) => {
-  const i = nextRipple * 4
-  ripples[i] = e.clientX
-  ripples[i + 1] = e.clientY
-  ripples[i + 2] = now()
-  ripples[i + 3] = 1
-  nextRipple = (nextRipple + 1) % MAX_RIPPLES
-  onPointerMove(e)
 }
 
 // Touch has no hover: let the glow fade once the finger lifts
@@ -253,7 +225,7 @@ onMounted(async () => {
   gl.enableVertexAttribArray(loc)
   gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0)
 
-  for (const name of ['uRes', 'uDpr', 'uTime', 'uMouse', 'uMouseOn', 'uScroll', 'uRipples', 'uBg', 'uDot']) {
+  for (const name of ['uRes', 'uDpr', 'uTime', 'uMouse', 'uMouseOn', 'uScroll', 'uBg', 'uDot', 'uHover']) {
     uniforms[name] = gl.getUniformLocation(program, name)
   }
 
@@ -262,6 +234,7 @@ onMounted(async () => {
 
   palette.bg = readCssRgb('--bg-rgb')
   palette.dot = readCssRgb('--dot-rgb')
+  palette.hover = readCssRgb('--dot-hover-rgb')
 
   resizeObserver = new ResizeObserver(resize)
   resizeObserver.observe(el)
@@ -273,7 +246,7 @@ onMounted(async () => {
     draw()
   } else {
     window.addEventListener('pointermove', onPointerMove, { passive: true })
-    window.addEventListener('pointerdown', onPointerDown, { passive: true })
+    window.addEventListener('pointerdown', onPointerMove, { passive: true })
     window.addEventListener('pointerup', onPointerUp, { passive: true })
     document.documentElement.addEventListener('pointerleave', onPointerLeave)
     raf = requestAnimationFrame(loop)
@@ -287,7 +260,7 @@ onBeforeUnmount(() => {
   resizeObserver?.disconnect()
   window.removeEventListener('scroll', onScroll)
   window.removeEventListener('pointermove', onPointerMove)
-  window.removeEventListener('pointerdown', onPointerDown)
+  window.removeEventListener('pointerdown', onPointerMove)
   window.removeEventListener('pointerup', onPointerUp)
   document.documentElement.removeEventListener('pointerleave', onPointerLeave)
   gl?.getExtension('WEBGL_lose_context')?.loseContext()

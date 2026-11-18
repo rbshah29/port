@@ -5,7 +5,7 @@
 /* ---------- Palette: Midnight ----------
    #000152 navy · #013160 · #016a64 teal · #fff3bf cream
    Colours are RGB triplets so they can be used with alpha via rgba(var(--x-rgb), a).
-   The background shader reads --bg-rgb and --dot-rgb too.
+   The background shader reads --bg-rgb, --dot-rgb and --dot-hover-rgb too.
    Roles: --imperial = primary (buttons), --imperial-light = secondary accent,
           --mint = bright accent (labels, links), --slate = borders/surfaces. */
 :root {
@@ -17,6 +17,7 @@
     --imperial-light-rgb: 0, 150, 140;
     --muted-rgb: 186, 194, 216;
     --dot-rgb: 255, 243, 191;
+    --dot-hover-rgb: 45, 212, 191;
     --faint: #7e88aa;
     --imperial-hover: #017c75;
     --panel: #02042a;

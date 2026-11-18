@@ -17,7 +17,7 @@
     {
         "title": "Daily Desk Chess",
         "git_url": "https://github.com/rbshah29/chess",
-        "live_url": "https://chess-alpha-wine.vercel.app/",
+        "live_url": "https://chess.rshah.dev",
         "status": "Work in progress",
         "description": "Play the computer from 500 to 2500 Elo, or a friend locally with timed games. Choose your color, time control and theme, promote pawns, resign and review the move notation. Rules run on chess.js; the custom minimax engine is still being tuned, so it can misjudge positions or occasionally stall.",
         "techs": [
